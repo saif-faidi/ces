@@ -4,6 +4,10 @@ from conf import lumi_socket
 from network.udp_client import Client
 import time
 
+'''
+led_strip id 1 => gpio 18,
+led_strip id 2 => gpio 19
+'''
 
 def setcolors(colors: list):
     for color in colors :

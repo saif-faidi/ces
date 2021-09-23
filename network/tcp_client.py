@@ -10,9 +10,9 @@ class Client :
 
     def receive(self):
         while self.receive_flag :
-            data = self.sock.recv(1024).decode()
+            data = self.sock.recv(2048).decode()
             if self.reader : self.reader(data)
-            time.sleep(0.1)
+            time.sleep(0.01)
 
     def __del__(self):
         self.receive_flag = False

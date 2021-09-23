@@ -3,8 +3,14 @@ from conf import aio_socket
 import json
 
 def reader(data):
-    #data = json.loads(data)
-    print(data)
+    try :
+        data = json.loads(data)
+        print(data)
+    except Exception :
+        print('error: ',len(data), data)
+
+
+
 
 if __name__ == "__main__":
     tcp_client = Client(aio_socket, reader)
